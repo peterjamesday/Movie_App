@@ -1,0 +1,18 @@
+FORM GOES HERE
+
+<%= form_for @movie, :html => { :class => "formclass"} do |f| %>
+	<div>
+		<%= f.label :title, "Name of movie", :class => "label-class" %><br>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label :description, "Description" %><br>
+		<%= f.text_field :description %>
+	</div>
+	<div>
+		<%= f.label :year_released %><br>
+		<%= f.text_field :year_released %>
+	</div>
+
+	<%= f.submit "Submit" %>
+<% end %>

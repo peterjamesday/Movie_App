@@ -1,0 +1,18 @@
+Movies!
+<br>
+<a href="<%= new_movie_path %>"> + Add a Movie </a>
+
+<%= form_tag "/", :method => :get do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag "Search Movies" %>
+<% end %>
+
+<% @movies.each do |movie| %>
+	<ul>
+	<li>
+		<h2><a href="<%= movie_path(movie) %>"><%= movie.title %></a></h2>
+	</li>
+		<p><a href="<%= movie_path(movie) %>"><%= movie.year_released %></a></p>
+		<p><%= movie.description %></p>
+	</ul>
+<% end %>
