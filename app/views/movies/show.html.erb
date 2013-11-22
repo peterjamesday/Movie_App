@@ -2,4 +2,6 @@
 <p><%= @movie.description %></p>
 <p><%= @movie.year_released %></p>
 
+<a href="<%= edit_movie_path %>"> Edit </a>
+<br>
 <%= button_to "Delete movie", @movie, :method => :delete%>
